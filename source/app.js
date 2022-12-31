@@ -1,6 +1,6 @@
-import { mapListToDOMElements, setFocusAndTitle } from "./domInteractions.js";
+import { mapListToDOMElements, setFocusAndTitle, menuCross } from "./domInteractions.js";
 
-class Website {
+class Repaks {
     constructor() {
         this.viewElements = {};
         this.InitializeApp();
@@ -20,8 +20,8 @@ class Website {
     };
 
     setupListeners = () => {
-        
+        this.viewElements.menuBtn.addEventListener('click', menuCross);
     };
 };
 
-document.addEventListener('DOMContentLoaded', new Website());
+document.addEventListener('DOMContentLoaded', new Repaks());
