@@ -1,44 +1,92 @@
 <!DOCTYPE html>
 <html lang="pl">
 
-<head>
-    <!-- METATAGS -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="ZerOne - Marcin Chudzik"/>
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <!-- LINKS -->
-    <link rel="canonical" href="">
-    <link rel="stylesheet" href="./css/style.css">
-    <!-- ICONS -->
-	<link rel="android-touch-icon" sizes="192x192" href="./images/icons/android-chrome-192x192.webp">
-	<link rel="android-touch-icon" sizes="512x512" href="./images/icons/android-chrome-512x512.webp">
-	<link rel="apple-touch-icon" sizes="180x180" href="./images/icons/apple-touch-icon.webp">
-	<link rel="icon" type="image/webp" sizes="32x32" href="./images/icons/favicon-32x32.webp">
-	<link rel="icon" type="image/webp" sizes="16x16" href="./images/icons/favicon-16x16.webp">
-	<link rel="icon" type="image/x-icon" href="./images/icons/favicon.ico">
+    <head>
+        <!-- METATAGS -->
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="author" content="ZerOne - Marcin Chudzik"/>
+        <meta name="description" content="">
+        <meta name="keywords" content="">
+        <!-- LINKS -->
+        <link rel="canonical" href="">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="manifest" href="./images/icons/site.webmanifest">
+        <!-- ICONS -->
+        <link rel="android-touch-icon" sizes="192x192"
+            href="./images/icons/android-chrome-192x192.webp">
+        <link rel="android-touch-icon" sizes="512x512"
+            href="./images/icons/android-chrome-512x512.webp">
+        <link rel="apple-touch-icon" sizes="180x180"
+            href="./images/icons/apple-touch-icon.webp">
+        <link rel="icon" type="image/webp" sizes="32x32"
+            href="./images/icons/favicon-32x32.webp">
+        <link rel="icon" type="image/webp" sizes="16x16"
+            href="./images/icons/favicon-16x16.webp">
+        <link rel="icon" type="image/x-icon" href="./images/icons/favicon.ico">
+        <title>repaks.pl</title>
+    </head>
 
-    <title>Title</title>
-</head>
+    <body>
+        <nav class="navbar">
+            <div class="container">
+                <img src="./images/nav/logo-no-bg.webp" alt="logo">
+                <div id="menuBtn" class="navbar__button" role="button">
+                    <span data-menu-bar="1"></span>
+                    <span data-menu-bar="2"></span>
+                    <span data-menu-bar="3"></span>
+                </div>
+            </div>
+        </nav>
 
-<body>
-    <nav>
+        <main>
+            <section id="home" class="home">
+                <div class="container">
+                    <h1>Oddaj swoje finanse w ręce ekspertów</h1>
+                    <p>
+                        Nasza firma to nie tylko Biuro rachunkowe. Niestrudzenie
+                        pracujemy,
+                        aby zapewnić Ci dobrą kondycję finansową, co czyni nas
+                        prawdziwymi
+                        partnerami w Twoim rozwoju i sukcesie. Skontaktuj się z
+                        nami, aby
+                        umówić się na konsultację i dowiedzieć się, co możemy
+                        dla Ciebie zrobić.
+                    </p>
+                    <button class="btn">Więcej</button>
+                </div>
+            </section>
 
-    </nav>
+            <section id="about" class="about">
+                <div class="container">
+                    <h2>O NAS</h2>
+                    <p>
+                        Dlaczego jesteśmy firmą, której warto powierzyć obsługę
+                        księgowości
+                        i finansów? Osobom fizycznym poszukującym pomocy przy
+                        rozliczeniach
+                        podatkowych oferujemy osobisty kontakt, wiedzę i
+                        rozwiązania, których
+                        nie daje oprogramowanie do samodzielnego wypełniania
+                        PIT-ów. Firmom
+                        świadczymy usługi, które pozwalają ocenić ich ogólną
+                        kondycję finansową,
+                        oraz dostarczamy regularne przejrzyste i łatwe do
+                        zrozumienia raporty,
+                        na podstawie których można podejmować działania.
+                    </p>
+                    <button class="btn btn--light">Kontakt</button>
+                </div>
+                <div class="about__image" role="img" alt="photo"></div>
+            </section>
 
-    <main>
-        <section>
+            <footer>
 
-        </section>
+            </footer>
+        </main>
 
-        <footer>
-
-        </footer>
-    </main>
-    
-    <script type="module" src="./src/app.js"></script>
-</body>
+        <script type="module" src="./source/app.js"></script>
+    </body>
 
 </html>
