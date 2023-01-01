@@ -1,4 +1,4 @@
-import { mapListToDOMElements, setFocusAndTitle, menuCross } from "./domInteractions.js";
+import { mapListToDOMElements, setFocusAndTitle, displayMenu } from "./domInteractions.js";
 
 class Repaks {
     constructor() {
@@ -13,14 +13,17 @@ class Repaks {
     };
 
     connectDOMElements = () => {
-        // Mapping chosen DOM elements to the lists.
-        const listOfIds = Array.from(document.querySelectorAll('[id]')).map(element => element.id);
+        const listOfIds = Array.from(document.querySelectorAll('[id]')).map(
+            element => element.id);
 
         this.viewElements = mapListToDOMElements(listOfIds, 'id');
     };
 
     setupListeners = () => {
-        this.viewElements.menuBtn.addEventListener('click', menuCross);
+        Array.from(document.querySelectorAll('.navbar__links a')).forEach(
+            link => link.addEventListener('click', displayMenu));
+
+        this.viewElements.menuBtn.addEventListener('click', displayMenu);
     };
 };
 

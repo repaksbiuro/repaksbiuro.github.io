@@ -2,6 +2,7 @@
 
 :root {
     --raisin-black: #272624;
+    --light-black: #323232;
     --crayola-gold: #E3BB8A;
 }
 
@@ -49,14 +50,17 @@ h1 {
 }
 
 .btn {
+    width: fit-content;
+    display: flex;
     padding: 12px 41px;
     font-size: 16px;
     font-family: 'Proxima nova';
     font-weight: bold;
-    border: 1px solid #323232;
+    border: 1px solid var(--light-black);
     color: white;
-    background-color: #323232;
+    background-color: var(--light-black);
     cursor: pointer;
+    text-decoration: none;
 }
 
 .btn:hover {
@@ -111,6 +115,7 @@ h1 {
     background-color: black;
     position: relative;
     transition: 0.3s all ease-in-out;
+    z-index: 1;
 }
 
 .navbar__button > span:nth-of-type(1) {
@@ -127,6 +132,40 @@ h1 {
     bottom: 0;
 }
 
+.navbar__menu {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: -220px;
+    background-color: var(--raisin-black);
+    text-align: center;
+    border-bottom: 1px solid var(--crayola-gold);
+    filter: drop-shadow(5px 5px 15px black);
+    transition: 0.5s all ease-in;
+}
+
+.navbar__links {
+    width: 70%;
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__links > a {
+    font-size: 24px;
+    font-family: 'Palatino linotype';
+    text-decoration: none;
+    color: white;
+}
+
+.navbar__links > a:hover {
+    color: var(--crayola-gold);
+}
+
 .home {
     background-color: var(--raisin-black);
     text-align: center;
@@ -141,7 +180,7 @@ h1 {
 }
 
 .home .btn {
-    margin: 50px 0;
+    margin: 50px auto;
 }
 
 .about {
@@ -153,7 +192,7 @@ h1 {
 .about h2 {
     font-size: 28px;
     color: var(--crayola-gold);
-    margin: 100px auto 40px auto;
+    margin: 80px auto 40px auto;
 }
 
 .about p {
@@ -165,7 +204,7 @@ h1 {
 }
 
 .about .btn {
-    margin: 40px 0 30px 0;
+    margin: 40px auto 30px auto;
 }
 
 .about__image {

@@ -19,26 +19,29 @@ export const setFocusAndTitle = () => {
 };
 
 // EVENT FUNCTIONS
-export const menuCross = event => {
-  const listOfBars = Array.from(document.querySelectorAll('[data-menu-bar]'));
-  const bar1 = listOfBars[0];
-  const bar2 = listOfBars[1];
-  const bar3 = listOfBars[2];
+export const displayMenu = event => {
+  const menu = document.getElementById('menu');
+  const [bar1, bar2, bar3] = Array.from(document.querySelectorAll('[data-menu-bar]'));
 
   const crossIn = () => {
     bar1.style.transform = 'skewY(45deg)';
     bar1.style.top = '45%';
+    bar1.style.backgroundColor = 'white';
     bar3.style.transform = 'skewY(-45deg)';
     bar3.style.bottom = '45%';
+    bar3.style.backgroundColor = 'white';
+    menu.style.top = '0';
   };
 
   const crossOut = () => {
     bar1.style.transform = 'unset';
     bar1.style.top = '0';
+    bar1.style.backgroundColor = 'black';
     bar3.style.transform = 'unset';
     bar3.style.bottom = '0';
+    bar3.style.backgroundColor = 'black';
+    menu.style.top = '-220px';
   };
-  
 
   if (bar2.style.left === '100px') {
     crossOut();
