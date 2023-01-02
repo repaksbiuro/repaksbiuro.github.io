@@ -24,7 +24,7 @@
 </head>
 
 <body>
-    <nav class="navbar">
+    <nav id="navigation" class="navbar">
         <div class="container">
             <img src="./images/nav/logo-no-bg.webp" alt="logo">
             <div id="menuBtn" class="navbar__button" role="button">
@@ -32,13 +32,16 @@
                 <span data-menu-bar="2"></span>
                 <span data-menu-bar="3"></span>
             </div>
+            <a href="#navigation" id="goTop" class="go-top" role="button">
+                <img src="./images/nav/go-up.webp" alt="go up">
+            </a>
         </div>
     </nav>
 
     <aside id="menu" class="navbar__menu">
         <div class="navbar__links">
             <a href="#about">O NAS</a>
-            <a href="#">OFERTA</a>
+            <a href="#offer">OFERTA</a>
             <a href="#">KONTAKT</a>
         </div>
     </aside>
@@ -82,6 +85,13 @@
                 <a class="btn btn--light" href="#" role="button">Kontakt</a>
             </div>
             <div class="about__image" role="img" alt="photo"></div>
+        </section>
+
+        <section id="offer" class="offer">
+            <div class="container">
+                <h2>OFERTA</h2>
+                <h4>Rozwiązania dla osób fizycznych i firm</h4>
+            </div>
         </section>
 
         <footer>
