@@ -1,4 +1,4 @@
-import { mapListToDOMElements, setFocusAndTitle, displayMenu } from "./domInteractions.js";
+import { mapListToDOMElements, setFocusAndTitle, displayMenu, displayScrollBtn } from "./domInteractions.js";
 
 class Repaks {
     constructor() {
@@ -24,6 +24,7 @@ class Repaks {
             link => link.addEventListener('click', displayMenu));
 
         this.viewElements.menuBtn.addEventListener('click', displayMenu);
+        window.addEventListener('scroll', displayScrollBtn);
     };
 };
 

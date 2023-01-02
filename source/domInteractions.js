@@ -51,3 +51,15 @@ export const displayMenu = event => {
     crossIn();
   };
 };
+
+export const displayScrollBtn = event => {
+  const scrollBtn = document.getElementById('goTop');
+  let top1 = document.documentElement.scrollTop;
+  let top2 = document.scrollTop;
+
+  if (top1 > 100 || top2 > 100) {
+    scrollBtn.style.display = 'flex';
+  } else {
+    scrollBtn.style.display = 'none';
+  };
+};

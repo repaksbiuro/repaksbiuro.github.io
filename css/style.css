@@ -36,6 +36,7 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-align: center;
 }
 
 h1 {
@@ -166,9 +167,33 @@ h1 {
     color: var(--crayola-gold);
 }
 
+.go-top {
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    background-color: var(--light-black);
+    cursor: pointer;
+    display: none;
+}
+
+.go-top img {
+    max-width: 50px;
+    height: auto;
+}
+
+.go-top:hover {
+    border: 2px solid var(--crayola-gold);
+}
+
 .home {
     background-color: var(--raisin-black);
-    text-align: center;
 }
 
 .home .container > p {
@@ -186,10 +211,9 @@ h1 {
 .about {
     background-color: white;
     font-family: 'Proxima nova';
-    text-align: center;
 }
 
-.about h2 {
+.about h2, .offer h2 {
     font-size: 28px;
     color: var(--crayola-gold);
     margin: 80px auto 40px auto;
@@ -213,7 +237,22 @@ h1 {
     background-image: url(../images/about/bg.webp);
     background-size: cover;
     background-position: center;
-    margin-bottom: 30px;
+}
+
+.offer {
+    height: 900px;
+    background-color: var(--raisin-black);
+    font-family: 'Proxima nova'
+}
+
+.offer h2 {
+    margin: 40px 0 10px 0;
+}
+
+.offer h4 {
+    font-size: 20px;
+    color: white;
+    letter-spacing: 2px;
 }
 
 /* Landscape phone */
