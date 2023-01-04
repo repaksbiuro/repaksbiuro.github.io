@@ -63,3 +63,31 @@ export const displayScrollBtn = event => {
     scrollBtn.style.display = 'none';
   };
 };
+
+export const displayOfferDetails = event => {
+  const deviceWidth = window.innerWidth;
+  let offerBoxInfo = document.getElementById(event.target.dataset.offerBox);
+  let offerBox = event.path[1];
+
+  if (offerBoxInfo.style.height !== '200px') {
+    if (deviceWidth < 768) {
+      offerBoxInfo.style.height = '200px';
+    } else if (deviceWidth < 992) {
+      offerBoxInfo.style.height = '200px';
+      offerBox.style.height = '300px';
+    } else if (deviceWidth < 1200) {
+      offerBoxInfo.style.height = '200px';
+      offerBox.style.height = '400px';
+    };
+  } else {
+      offerBoxInfo.style.height = '44px';
+      if (deviceWidth < 576) {
+        offerBox.style.height = 'fit-content';
+      } else if (deviceWidth < 992) {
+        offerBox.style.height = '235px';
+      } else if (deviceWidth < 1200) {
+        console.log(event)
+        offerBox.style.height = '305px';
+      }
+  };
+};

@@ -1,4 +1,4 @@
-import { mapListToDOMElements, setFocusAndTitle, displayMenu, displayScrollBtn } from "./domInteractions.js";
+import { mapListToDOMElements, setFocusAndTitle, displayMenu, displayScrollBtn, displayOfferDetails } from "./domInteractions.js";
 
 class Repaks {
     constructor() {
@@ -14,14 +14,19 @@ class Repaks {
 
     connectDOMElements = () => {
         const listOfIds = Array.from(document.querySelectorAll('[id]')).map(
-            element => element.id);
+            element => element.id
+        );
 
         this.viewElements = mapListToDOMElements(listOfIds, 'id');
     };
 
     setupListeners = () => {
         Array.from(document.querySelectorAll('.navbar__links a')).forEach(
-            link => link.addEventListener('click', displayMenu));
+            link => link.addEventListener('click', displayMenu)
+        );
+        Array.from(document.querySelectorAll('.offer__list__item .btn')).forEach(
+            button => button.addEventListener('click', displayOfferDetails)
+        );
 
         this.viewElements.menuBtn.addEventListener('click', displayMenu);
         window.addEventListener('scroll', displayScrollBtn);
