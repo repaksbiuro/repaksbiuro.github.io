@@ -68,6 +68,7 @@ b {
     background-color: var(--light-black);
     cursor: pointer;
     text-decoration: none;
+    transition: .5s all;
 }
 
 .btn:hover {
@@ -204,7 +205,7 @@ b {
 
 .home .container > p {
     font-size: 18px;
-    font-family: 'Proxima nova';
+    font-family: 'Palantino linotype';
     line-height: 180%;
     letter-spacing: 2px;
     color: white;
@@ -270,6 +271,10 @@ b {
     margin: 50px 0;
 }
 
+.offer__list .btn {
+    margin-top: 10px;
+}
+
 .offer__list__item {
     width: 90%;
     height: fit-content;
@@ -292,6 +297,9 @@ b {
     height: 43px;
     overflow: hidden;
     transition: .5s all;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .offer__info > h4 {
@@ -300,10 +308,34 @@ b {
     color: black;
 }
 
-.offer__info > p {
-    width: 97%;
-    margin-top: 20px;
-    text-align: justify;
+.offer__info__list {
+    width: 100%;
+    margin-top: 12px;
+}
+
+.offer__info__list > li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 8px 0;
+}
+
+.offer__info__list h5 {
+    width: 75%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: left;
+    line-height: 120%;
+}
+
+.offer__info__list p {
+    width: 25%;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    line-height: 120%;
 }
 
 footer {
@@ -396,18 +428,30 @@ footer {
 
     .offer__info {
         margin-top: 65px;
-        height: 63px;
+        height: 44px;
     }
 
     .offer__info > p {
         margin-top: 60px;
+    }
+
+    .offer__info__list h5, .offer__info__list p {
+        font-size: 16px;
+    }
+
+    .offer__info__list h5 {
+        width: 70%;
+    }
+
+    .offer__info__list p {
+        width: 30% ;
     }
 }
 
 /* Laptop */
 @media only screen and (min-width: 992px) {
     h1 {
-        width: 100%;
+        width: 70%;
         word-spacing: 1px;
         letter-spacing: 2px;
     }
@@ -419,8 +463,25 @@ footer {
         font-size: 18px;
     }
 
-    .home .container p, .about p {
-        width: 82%;
+    .home .container > p {
+        width: 65%;
+    }
+
+    .about {
+        display: grid;
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 100%;
+    }
+    .about .container {
+        width: 100%;
+    }
+
+    .about p {
+        width: 65%;
+    }
+
+    .about__image {
+        height: 100%;
     }
 
     .offer__list {
@@ -433,7 +494,20 @@ footer {
     }
 
     .offer__list__item .btn {
-        margin-top: 5px;
+        margin-bottom: 30px;
+    }
+
+    .offer__info {
+        margin-top: 95px;
+        height: 55px;
+    }
+
+    .offer__info h4 {
+        font-size: 28px;
+    }
+
+    .offer__info__list {
+        margin-top: 16px;
     }
 
     .copyright {
@@ -447,7 +521,43 @@ footer {
 
 /* Desktop */
 @media only screen and (min-width: 1200px) {
+    h1 {
+        font-size: 42px;
+        width: 100%;
+        word-spacing: 2px;
+    }
+
     .container {
         width: 1140px;
+    }
+
+    .btn {
+        font-size: 20px;
+    }
+
+    .home .container > p {
+        width: 75%;
+        font-size: 22px;
+    }
+
+    .about {
+        grid-template-rows: 700px;
+    }
+
+    .about h2, .offer h2 {
+        font-size: 36px
+    }
+
+    .about p {
+        font-size: 20px;
+    }
+
+    .offer__list {
+        grid-template-columns:calc(100% / 3 - 8px) calc(100% / 3 - 8px) calc(100% / 3 - 8px);
+        gap: 12px;
+    }
+
+    .offer__info__list h5, .offer__info__list p {
+        font-size: 20px;
     }
 }
