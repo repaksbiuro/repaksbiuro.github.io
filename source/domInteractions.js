@@ -80,7 +80,7 @@ export const displayOfferDetails = event => {
   } else if (deviceWidth < 992) {
     if (offerBoxInfo.style.height !== '400px') {
       offerBoxInfo.style.height = '400px';
-      offerBox.style.height = '480px';
+      offerBox.style.height = '490px';
     } else {
       offerBoxInfo.style.height = '44px';
       offerBox.style.height = '235px';
