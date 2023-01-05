@@ -15,7 +15,6 @@ export const mapListToDOMElements = (listOfValues, attribute) => {
 export const setFocusAndTitle = () => {
   let heading = document.querySelector('h1');
   heading.focus();
-  document.title = heading.innerText;
 };
 
 // EVENT FUNCTIONS
@@ -68,26 +67,44 @@ export const displayOfferDetails = event => {
   const deviceWidth = window.innerWidth;
   let offerBoxInfo = document.getElementById(event.target.dataset.offerBox);
   let offerBox = event.path[1];
+  let btn = event.target;
 
-  if (offerBoxInfo.style.height !== '200px') {
-    if (deviceWidth < 768) {
-      offerBoxInfo.style.height = '200px';
-    } else if (deviceWidth < 992) {
-      offerBoxInfo.style.height = '200px';
-      offerBox.style.height = '300px';
-    } else if (deviceWidth < 1200) {
-      offerBoxInfo.style.height = '200px';
-      offerBox.style.height = '400px';
-    };
-  } else {
+  if (deviceWidth < 768) {
+    // For devices with smaller screen than a tablets.
+    if (offerBoxInfo.style.height !== '300px') {
+      offerBoxInfo.style.height = '300px';
+    } else {
       offerBoxInfo.style.height = '44px';
-      if (deviceWidth < 576) {
-        offerBox.style.height = 'fit-content';
-      } else if (deviceWidth < 992) {
-        offerBox.style.height = '235px';
-      } else if (deviceWidth < 1200) {
-        console.log(event)
-        offerBox.style.height = '305px';
-      }
-  };
+    };
+    // For laptops with smaller screen than a desktop monitor.
+  } else if (deviceWidth < 992) {
+    if (offerBoxInfo.style.height !== '400px') {
+      offerBoxInfo.style.height = '400px';
+      offerBox.style.height = '480px';
+    } else {
+      offerBoxInfo.style.height = '44px';
+      offerBox.style.height = '235px';
+    };
+
+    if (btn.style.marginBottom === '30px') {
+      btn.style.marginBottom = '0px';
+    } else {
+      btn.style.marginBottom = '30px';
+    };
+    // For every device with a bigger screen than laptops.
+  } else {
+    if (offerBoxInfo.style.height !== '400px') {
+      offerBoxInfo.style.height = '400px';
+      offerBox.style.height = '515px';
+    } else {
+      offerBoxInfo.style.height = '55px';
+      offerBox.style.height = '305px';
+    };
+
+    if (btn.style.marginBottom === '0px') {
+      btn.style.marginBottom = '30px';
+    } else {
+      btn.style.marginBottom = '0px';
+    };  
+  }
 };
