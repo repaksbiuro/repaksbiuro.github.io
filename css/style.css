@@ -18,17 +18,20 @@ html {
 
 @font-face {
     font-family: Palatino linotype;
+    font-display: swap;
     src: url(../fonts/palatino-linotype/pala.ttf);
 }
 
 @font-face {
     font-family: Palatino linotype;
-    src: url(../fonts/palatino-linotype/palab.ttf);
     font-weight: bold;
+    font-display: swap;
+    src: url(../fonts/palatino-linotype/palab.ttf);
 }
 
 @font-face {
     font-family: Proxima nova;
+    font-display: swap;
     src: url(../fonts/proxima-nova/ProximaNova-Regular.otf);
 }
 
@@ -104,6 +107,7 @@ b {
 }
 
 .navbar .container > img {
+    width: auto;
     max-height: 90px;
     margin-left: calc(50% - 35px);
 }
