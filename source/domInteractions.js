@@ -71,8 +71,8 @@ export const displayOfferDetails = event => {
 
   if (deviceWidth < 768) {
     // For devices with smaller screen than a tablets.
-    if (offerBoxInfo.style.height !== '300px') {
-      offerBoxInfo.style.height = '300px';
+    if (offerBoxInfo.style.height !== '340px') {
+      offerBoxInfo.style.height = '340px';
     } else {
       offerBoxInfo.style.height = '44px';
     };
@@ -80,7 +80,7 @@ export const displayOfferDetails = event => {
   } else if (deviceWidth < 992) {
     if (offerBoxInfo.style.height !== '400px') {
       offerBoxInfo.style.height = '400px';
-      offerBox.style.height = '490px';
+      offerBox.style.height = '510px';
     } else {
       offerBoxInfo.style.height = '44px';
       offerBox.style.height = '235px';
@@ -95,7 +95,7 @@ export const displayOfferDetails = event => {
   } else {
     if (offerBoxInfo.style.height !== '400px') {
       offerBoxInfo.style.height = '400px';
-      offerBox.style.height = '515px';
+      offerBox.style.height = '540px';
     } else {
       offerBoxInfo.style.height = '55px';
       offerBox.style.height = '305px';
