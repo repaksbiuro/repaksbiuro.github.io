@@ -66,7 +66,7 @@ export const displayScrollBtn = event => {
 export const displayOfferDetails = event => {
   const deviceWidth = window.innerWidth;
   let offerBoxInfo = document.getElementById(event.target.dataset.offerBox);
-  let offerBox = event.path[1];
+  let offerBox = event.composedPath()[1];
   let btn = event.target;
 
   if (deviceWidth < 768) {
