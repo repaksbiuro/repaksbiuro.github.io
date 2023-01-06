@@ -261,7 +261,7 @@ b {
 }
 
 .offer h4 {
-    font-size: 20px;
+    font-size: 22px;
     color: white;
     letter-spacing: 2px;
     text-align: center;
@@ -306,10 +306,11 @@ b {
     align-items: center;
 }
 
-.offer__info > h4 {
+.offer__info > h5 {
     font-size: 22px;
     font-weight: bold;
     color: black;
+    text-align: center;
 }
 
 .offer__info__list {
