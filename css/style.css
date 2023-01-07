@@ -107,7 +107,7 @@ b {
 }
 
 .navbar .container > img {
-    width: auto;
+    width: 70px;
     max-height: 90px;
     margin-left: calc(50% - 35px);
 }
@@ -226,9 +226,12 @@ b {
 
 .about h2, .offer h2 {
     font-size: 28px;
-    color: var(--crayola-gold);
     margin: 80px auto 40px auto;
     text-align: center;
+}
+
+.about h2 {
+    color: var(--raisin-black);
 }
 
 .about p {
@@ -258,9 +261,10 @@ b {
 
 .offer h2 {
     margin: 40px 0 10px 0;
+    color: var(--crayola-gold);
 }
 
-.offer h4 {
+.offer .container > h5 {
     font-size: 22px;
     color: white;
     letter-spacing: 2px;
@@ -507,7 +511,7 @@ footer {
     }
 
     .offer__info__list {
-        margin-top: 16px;
+        margin-top: 20px;
     }
 
     .copyright {
