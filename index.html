@@ -47,7 +47,7 @@
         <div class="navbar__links">
             <a href="#about">O NAS</a>
             <a href="#offer">OFERTA</a>
-            <a href="#">KONTAKT</a>
+            <a href="#contact">KONTAKT</a>
         </div>
     </aside>
 
@@ -301,7 +301,24 @@
             </div>
         </section>
 
-        <footer>
+        <footer id="contact">
+            <div class="container">
+                <form class="contact-form" id="contactForm" method="post" action=".">
+                    <h3>Napisz do nas</h3>
+
+					<label for="fname" aria-labelledby="fname">Imię <small>(Minimum 3 znaki)</small></label>
+					<input tabindex="-23" id="fname" name="fname" type="text" required placeholder="Podaj swoje pełne Imię">
+
+					<label for="email" aria-labelledby="email">Email</label>
+					<input tabindex="-24" id="email" name="contact_email" type="email" required placeholder="Podaj swój adres Email">
+
+					<label for="message" aria-labelledby="message">Dodatkowe informacje <small>(Opcjonalnie)</small></label>
+					<textarea tabindex="-25" id="message" name="message"></textarea>
+
+					<button tabindex="-26" class="btn" id="formSendBtn" type="submit">WYŚLIJ</button>
+                </form>
+            </div>
+            
             <p class="copyright">
                 <a href="https://www.zerone.company/">
                     © ZerOne <sup>TM</sup>
