@@ -18,6 +18,10 @@
     <link rel="canonical" href="https://repaks.pl/">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="manifest" href="./images/icons/site.webmanifest">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+Tangsa:wght@400;600&display=swap">
     <!-- ICONS -->
     <link rel="android-touch-icon" type="image/webp" sizes="192x192" href="./images/icons/android-chrome-192x192.webp">
     <link rel="android-touch-icon" type="image/webp" sizes="512x512" href="./images/icons/android-chrome-512x512.webp">
@@ -45,9 +49,9 @@
 
     <aside id="menu" class="navbar__menu">
         <div class="navbar__links">
-            <a href="#about">O NAS</a>
-            <a href="#offer">OFERTA</a>
-            <a href="#contact">KONTAKT</a>
+            <span data-section-name="about">O NAS</span>
+            <span data-section-name="offer">OFERTA</span>
+            <span data-section-name="contact">KONTAKT</span>
         </div>
     </aside>
 
@@ -82,7 +86,7 @@
         <section id="offer" class="offer">
             <div class="container">
                 <h2>OFERTA</h2>
-                <h5>Rozwiązania dla osób fizycznych i firm</h5>
+                <p>Rozwiązania dla osób fizycznych i firm</p>
 
                 <div class="offer__list">
                     <div class="offer__list__item offer__list__item--gold"> 
@@ -292,7 +296,13 @@
                     <div class="offer__list__item offer__list__item--gold">
                         <div id="offerBox7" class="offer__info">
                             <h5>Pomoc w założeniu działalności</h5>
-                            <p>Szczegóły i treść</p>
+                            <ul class="offer__info__list">
+                                <li class="offer__info__list__item">
+                                    <span>
+                                        <h6>W TRAKCIE OPRACOWYWANIA</h6>
+                                    </span>
+                                </li>
+                            </ul>
                         </div>
                         <button class="btn" data-offer-box="offerBox7">Szczegóły</button>
                     </div>
@@ -320,7 +330,7 @@
             </div>
             
             <p class="copyright">
-                <a href="https://www.zerone.company/">
+                <a href="https://zerone.company/">
                     © ZerOne <sup>TM</sup>
                 </a>
                 , 2023. All rights reserved.

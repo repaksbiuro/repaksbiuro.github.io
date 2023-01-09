@@ -21,7 +21,7 @@ class Repaks {
     };
 
     setupListeners = () => {
-        Array.from(document.querySelectorAll('.navbar__links a')).forEach(
+        Array.from(document.querySelectorAll('[data-section-name]')).forEach(
             link => link.addEventListener('click', displayMenu)
         );
         Array.from(document.querySelectorAll('.offer__list__item .btn')).forEach(

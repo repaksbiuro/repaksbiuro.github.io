@@ -21,21 +21,21 @@ export const displayMenu = event => {
   const crossIn = () => {
     bar1.style.transform = 'skewY(45deg)';
     bar1.style.top = '45%';
-    bar1.style.backgroundColor = 'white';
     bar3.style.transform = 'skewY(-45deg)';
     bar3.style.bottom = '45%';
-    bar3.style.backgroundColor = 'white';
     menu.style.top = '0';
   };
 
   const crossOut = () => {
     bar1.style.transform = 'unset';
     bar1.style.top = '0';
-    bar1.style.backgroundColor = 'black';
     bar3.style.transform = 'unset';
     bar3.style.bottom = '0';
-    bar3.style.backgroundColor = 'black';
     menu.style.top = '-220px';
+  };
+
+  if (event.target.dataset.sectionName) {
+    document.getElementById(event.target.dataset.sectionName).scrollIntoView({'behavior': 'smooth', 'block': 'start'});
   };
 
   if (bar2.style.left === '100px') {
@@ -70,7 +70,7 @@ export const displayOfferDetails = event => {
     if (offerBoxInfo.style.height !== '340px') {
       offerBoxInfo.style.height = '340px';
     } else {
-      offerBoxInfo.style.height = '44px';
+      offerBoxInfo.style.height = '48px';
     };
     // For laptops with smaller screen than a desktop monitor.
   } else if (deviceWidth < 992) {
@@ -78,7 +78,7 @@ export const displayOfferDetails = event => {
       offerBoxInfo.style.height = '400px';
       offerBox.style.height = '510px';
     } else {
-      offerBoxInfo.style.height = '44px';
+      offerBoxInfo.style.height = '48px';
       offerBox.style.height = '235px';
     };
 

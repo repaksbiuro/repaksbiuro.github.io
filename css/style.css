@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+Tangsa:wght@400;600&display=swap');
 @import url(reset.css);
 
 :root {
@@ -16,25 +17,6 @@ html {
     scroll-behavior: smooth;
 }
 
-@font-face {
-    font-family: Palatino linotype;
-    font-display: swap;
-    src: url(../fonts/palatino-linotype/pala.ttf);
-}
-
-@font-face {
-    font-family: Palatino linotype;
-    font-weight: bold;
-    font-display: swap;
-    src: url(../fonts/palatino-linotype/palab.ttf);
-}
-
-@font-face {
-    font-family: Proxima nova;
-    font-display: swap;
-    src: url(../fonts/proxima-nova/ProximaNova-Regular.otf);
-}
-
 section {
     display: flex;
     flex-direction: column;
@@ -44,11 +26,16 @@ section {
 
 h1 {
     font-size: 36px;
-    font-family: 'Palatino linotype';
     color: var(--crayola-gold);
     margin: 60px auto;
-    letter-spacing: 3px;
     text-align: center;
+}
+
+h2 {
+    font-size: 28px;
+    font-family: 'Merriweather', serif;
+    text-align: center;
+    color: var(--raisin-black);
 }
 
 b {
@@ -57,6 +44,10 @@ b {
 
 small {
     font-size: 14px;
+}
+
+footer, .about, .home {
+    font-family: 'Merriweather', serif;
 }
 
 .container {
@@ -68,7 +59,7 @@ small {
     display: flex;
     padding: 12px 41px;
     font-size: 16px;
-    font-family: 'Proxima nova';
+    font-family: 'Noto Sans Tangsa', sans-serif;
     font-weight: bold;
     border: 1px solid var(--light-black);
     color: white;
@@ -98,7 +89,7 @@ small {
 .navbar {
     width: 100%;
     height: 90px;
-    background-color: white;
+    background-color: var(--raisin-black);
     overflow-x: hidden;
 }
 
@@ -112,7 +103,7 @@ small {
 
 .navbar .container > img {
     width: 70px;
-    max-height: 90px;
+    height: 90px;
     margin-left: calc(50% - 35px);
 }
 
@@ -128,7 +119,7 @@ small {
 .navbar__button > span {
     width: 100%;
     height: 2px;
-    background-color: black;
+    background-color: white;
     position: relative;
     transition: 0.3s all ease-in-out;
     z-index: 1;
@@ -171,11 +162,12 @@ small {
     justify-content: space-between;
 }
 
-.navbar__links > a {
+.navbar__links > span {
     font-size: 24px;
-    font-family: 'Palatino linotype';
+    font-family: 'Merriweather', serif;
     text-decoration: none;
     color: white;
+    cursor: pointer;
 }
 
 .navbar__links > a:hover {
@@ -208,15 +200,15 @@ small {
 }
 
 .home {
-    background-color: var(--raisin-black);
+    background-color: white;
 }
 
 .home .container > p {
-    font-size: 18px;
-    font-family: 'Palantino linotype';
+    width: 90%;
+    margin: 0 auto;
+    font-size: 20px;
     line-height: 180%;
-    letter-spacing: 2px;
-    color: white;
+    color: var(--raisin-black);
 }
 
 .home .btn {
@@ -225,25 +217,19 @@ small {
 
 .about {
     background-color: white;
-    font-family: 'Proxima nova';
-}
-
-.about h2, .offer h2 {
-    font-size: 28px;
-    margin: 80px auto 40px auto;
-    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    margin: 50px 0;
 }
 
 .about h2 {
-    color: var(--raisin-black);
+    margin: 80px auto 40px auto;
 }
 
 .about p {
-    font-size: 16px;
-    line-height: 160%;
-    letter-spacing: 1px;
-    word-spacing: 2px;
-    color: #333;
+    font-size: 19px;
+    line-height: 180%;
+    color: var(--raisin-black)
 }
 
 .about .btn {
@@ -259,18 +245,18 @@ small {
 }
 
 .offer {
-    background-color: var(--raisin-black);
-    font-family: 'Proxima nova'
+    background-color: white;
+    font-family: 'Noto Sans Tangsa', sans-serif;
 }
 
 .offer h2 {
-    margin: 40px 0 10px 0;
-    color: var(--crayola-gold);
+    margin: 80px 0 10px 0;
 }
 
-.offer .container > h5 {
-    font-size: 22px;
-    color: white;
+.offer .container > p {
+    font-size: 20px;
+    font-family: 'Merriweather', serif;
+    color: var(--light-black);
     letter-spacing: 2px;
     text-align: center;
 }
@@ -291,17 +277,26 @@ small {
     width: 90%;
     height: fit-content;
     padding: 10px 0;
-    background-color: white;
+    background-color: var(--light-black);
+    color: white;
     justify-self: center;
     transition: .5s all;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    border-radius: 5px;
+    font-family: 'Merriweather', serif;
+    box-shadow: 5px 5px 15px gray;
 }
 
 .offer__list__item--gold {
     background-color: var(--crayola-gold);
+    color: var(--raisin-black);
+}
+
+.offer__list__item--gold .offer__info > h5 {
+    color: var(--raisin-black);
 }
 
 .offer__info {
@@ -316,14 +311,13 @@ small {
 
 .offer__info > h5 {
     font-size: 22px;
-    font-weight: bold;
-    color: black;
+    color: white;
     text-align: center;
 }
 
 .offer__info__list {
     width: 100%;
-    margin-top: 12px;
+    margin-top: 16px;
 }
 
 .offer__info__list__item {
@@ -336,7 +330,6 @@ small {
 
 .offer__info__list__item h5, .offer__info__list__item h6 {
     font-size: 20px;
-    font-weight: bold;
     line-height: 120%;
 }
 
@@ -363,43 +356,43 @@ small {
 }
 
 footer {
-    background-color: white;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     background-image: linear-gradient(to bottom,
-    #272624,
-    #4f483b,
-    #7c6d54,
-    #ae936e,
-    #e3bb8a
+    #ffffff,
+    #c4c3c3,
+    #8c8a8a,
+    #575554,
+    #272624
     );
 }
 
 .contact-form {
     width: 100%;
-    margin: 200px 0 40px 0;
+    margin: 150px 0 40px 0;
     padding: 20px 10px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: space-between;
     background-color: white;
+    border-radius: 5px;
 }
 
 .contact-form > h3 {
     font-size: 26px;
-    font-weight: bold;
-    line-height: 120%;
-    align-self: center;
-    margin-bottom: 30px;
+    margin: 10px auto 30px auto;
 }
 
 .contact-form > label {
     font-size: 18px;
-    font-weight: bold;
     margin: 5px 0;
+}
+
+.contact-form small {
+    color: rgba(0, 0, 0, 0.6);
 }
 
 .contact-form > input {
@@ -408,6 +401,11 @@ footer {
     border: none;
     border-bottom: 1px solid var(--raisin-black);
     margin: 12px 0;
+    outline: none;
+}
+
+.contact-form > input:focus, .contact-form textarea:focus {
+    border-bottom: 2px solid var(--crayola-gold);
 }
 
 .contact-form textarea {
@@ -415,6 +413,7 @@ footer {
     width: 90%;
     resize: none;
     border: none;
+    outline: none;
     border-bottom: 1px solid var(--raisin-black);
 }
 
@@ -424,9 +423,9 @@ footer {
 
 .copyright {
     font-size: 18px;
-    font-family: 'Palatino linotype';
     line-height: 180%;
     margin: 30px 0;
+    color: ghostwhite;
 }
   
 .copyright sup {
@@ -437,6 +436,7 @@ footer {
 
 .copyright a {
     text-decoration: none;
+    color: mediumpurple;
 }
 
 /* Landscape phone */
@@ -445,16 +445,16 @@ footer {
         letter-spacing: 2px;
     }
 
+    h2 {
+        font-size: 32px;
+    }
+
     .container {
         width: 540px;
     }
 
     .home .container > p {
         font-size: 19px;
-    }
-
-    .about h2, .offer h2 {
-        font-size: 32px;
     }
 
     .about p {
@@ -485,8 +485,13 @@ footer {
         padding: 12px 30px;
     }
 
-    .home .container p, .about p {
-        width: 85%;
+    .home .container p {
+        width: 75%;
+        margin: 0 auto;
+    }
+
+    .about p {
+        width: 81%;
         margin: 0 auto;
     }
 
@@ -506,7 +511,15 @@ footer {
 
     .offer__info {
         margin-top: 65px;
-        height: 44px;
+        height: 48px;
+    }
+
+    .offer__info__list__item h6 {
+        font-size: 16px;
+    }
+
+    .contact-form {
+        width: 50%;
     }
 }
 
@@ -533,6 +546,7 @@ footer {
         display: grid;
         grid-template-columns: 50% 50%;
         grid-template-rows: 100%;
+        filter: drop-shadow(5px 5px 20px gray);
     }
     .about .container {
         width: 100%;
@@ -579,6 +593,10 @@ footer {
     .copyright sup {
         font-size: 12px;
     }
+
+    .contact-form {
+        width: 40%;
+    }
 }
 
 /* Desktop */
@@ -586,7 +604,11 @@ footer {
     h1 {
         font-size: 42px;
         width: 100%;
-        word-spacing: 2px;
+        word-spacing: 1px;
+    }
+
+    h2 {
+        font-size: 36px;
     }
 
     .container {
@@ -598,16 +620,12 @@ footer {
     }
 
     .home .container > p {
-        width: 75%;
+        width: 65%;
         font-size: 22px;
     }
 
     .about {
         grid-template-rows: 700px;
-    }
-
-    .about h2, .offer h2 {
-        font-size: 36px
     }
 
     .about p {
@@ -617,6 +635,10 @@ footer {
     .offer__list {
         grid-template-columns:calc(100% / 3 - 8px) calc(100% / 3 - 8px) calc(100% / 3 - 8px);
         gap: 12px;
+    }
+
+    .offer__info > h5 {
+        font-size: 24px;
     }
 
     .offer__info__list__item h5 {
