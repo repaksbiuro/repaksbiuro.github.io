@@ -80,7 +80,7 @@ export const displayOfferDetails = event => {
   } else if (deviceWidth < 992) {
     if (offerBoxInfo.style.height !== '400px') {
       offerBoxInfo.style.height = '400px';
-      offerBox.style.height = '510px';
+      offerBox.style.height = '520px';
     } else {
       offerBoxInfo.style.height = '47px';
       offerBox.style.height = '235px';
@@ -95,7 +95,7 @@ export const displayOfferDetails = event => {
   } else {
     if (offerBoxInfo.style.height !== '400px') {
       offerBoxInfo.style.height = '400px';
-      offerBox.style.height = '540px';
+      offerBox.style.height = '550px';
     } else {
       offerBoxInfo.style.height = '55px';
       offerBox.style.height = '305px';
