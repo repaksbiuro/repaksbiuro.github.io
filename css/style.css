@@ -4,6 +4,7 @@
     --raisin-black: #272624;
     --light-black: #323232;
     --crayola-gold: #E3BB8A;
+    --blood: #6F100F;
 }
 
 @font-face {
@@ -53,7 +54,7 @@ section {
 
 h1 {
     font-size: 36px;
-    color: var(--crayola-gold);
+    color: var(--blood);
     margin: 60px auto;
     text-align: center;
 }
@@ -452,7 +453,7 @@ footer {
     font-size: 18px;
     line-height: 180%;
     margin: 30px 0;
-    color: ghostwhite;
+    color: white;
 }
   
 .copyright sup {
