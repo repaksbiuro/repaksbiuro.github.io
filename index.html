@@ -315,8 +315,8 @@
 
         <footer id="contact">
             <div class="container">
-                <form class="contact-form" id="contactForm" method="post" action=".">
-                    <h2>Napisz do nas</h2>
+				<form class="contact-form" id="contactForm" method="post" action=".">
+					<h2>Napisz do nas</h2>
 
 					<label for="fname" aria-labelledby="fname">Imię <small>(Minimum 3 znaki)</small></label>
 					<input tabindex="-23" id="fname" name="fname" type="text" required placeholder="Podaj swoje pełne Imię">
@@ -328,11 +328,11 @@
 					<textarea tabindex="-25" id="message" name="message"></textarea>
 
 					<button tabindex="-26" class="btn" id="formSendBtn" type="submit">WYŚLIJ</button>
-                </form>
+				</form>
             </div>
             
             <p class="copyright">
-                <a href="https://zerone.company/">
+                <a tabindex="-27" href="https://zerone.company/">
                     © ZerOne <sup>TM</sup>
                 </a>
                 , 2023. All rights reserved.
@@ -341,6 +341,7 @@
     </main>
 
     <script type="module" src="./source/app.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </body>
 
 </html>
