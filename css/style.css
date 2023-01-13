@@ -8,30 +8,30 @@
 
 @font-face {
     font-family: 'Merriweather';
-    font-style: normal;
     font-weight: 400;
-    src: local('Merriweather');
+    font-display: swap;
+    src: local('Merriweather'), url(https://fonts.gstatic.com/l/font?kit=u-440qyriQwlOrhSvowK_l5OfjTdXdfOnMrdCEuxO6Aw09aDSvfCii-gQLbgSaPt-AvxsnW9QTxTSRySQZC3BtCsExbQIU43tCiwbmGjkfZvgQddbOzLHHU-E8e1mhHkagPYpN7MgI0RvQC-gffAnVCGg02SBNAlllTohaTVr-mAntIrvKSrKgxrPOxiiyGNYtq_b-Us4mcOpwSgVTahE-g4fkyEsxJk94V4nCvrO9z85JH_g3iSC8s0kl4WxnZCwav5x02C3msW7vscGezeMGp2JgH-qmm6zGQZvJeXV-eQL_ZkbItUIMd8anYWBmZ4yYWpTYVMvu6wqH5ThUwjvAeVhxfDy7dSK_Py6Ysz-Ddx7x39LJk52N-jmHcUgcUavZVFVzzXsgHQ5w&skey=379c1eccf863c625&v=v30) format('woff2');
 }
 
 @font-face {
     font-family: 'Merriweather';
-    font-style: bold;
     font-weight: 700;
-    src: local('Merriweather');
+    font-display: swap;
+    src: local('Merriweather'), url(https://fonts.gstatic.com/l/font?kit=u-4n0qyriQwlOrhSvowK_l52xwNpWtVrrMnYD06yNq9GqayGTfLBhyCtQ7PnTKDw5xbyt3K4QjFcRCWpeJWwA9OhHBvTJEkytzWvc2KmlvNsjAhQ1xRyVjdwWZf7w0G6M2GGzryi6v1_xHDA_7C53BDEwg7QSpNq2Aan1vaJ_LTc-o9O2M7OQWYfV5EW9V3LHZz4LqN9ozdf-FT-CkH_ZZ9ECDP4zW0di-oD8EaYV66AheyQ7R79bKl98RVbohA266v5xk2C12sW7_scDOzeMWp2GwH-q2m632QZvZeXWOeQLvZlU4tUIcd8b3YWB2Z42IWpTIVMve6wqX5TikwjvQeVvhfDyrdSLvPy6Isz9zdx7h3-BZk52d-jnXcUgMUasJVFVjzXtwHQ5jxr5Q&skey=76f88370d7055e09&v=v30) format('woff2');
 }
 
 @font-face {
     font-family: 'Noto Sans Tangsa';
-    font-style: normal;
     font-weight: 400;
-    src: local('Noto Sans Tangsa'), local('Noto-Sans-Tangsa');
+    font-display: swap;
+    src: local('Noto Sans Tangsa'), local('Noto-Sans-Tangsa'), url(https://fonts.gstatic.com/l/font?kit=z7NPdQPmcigbbZAIOl9igP26K470jo6T8_-TL9Dfdqim5zIoCpwujc2HCltwkDUhG7MhZgIrqVQkaWOBXrZqTRCR72gNb3kkw-gVoSo7EfkA-y2YLJQqYaJwtAd9BREKlmRX4mW8S7O8V7FMLabvylz1M9l084S-TTYHcqH_jTDRbyvTOElPovjTdGTWe3hd5S7dnLCUM-NyY7crqozvnSi_ZwYV2XhuBatSIL02kvEf9c5hVtJoGLdDTD6L-Ucef_vrYl6_rKEutrbDYjZcG1LLByqU--hLjgceWcYSZrshYqmIOFgpc24Kk2U7oDtb_ltcixnQNHwIGowloY571FRx-ZIXBeowYSNKSjXvrVkC0pYWK6MnfBMPDUK_HK0d18A8LjIv8Yv1iBEx7TE&skey=811194d00dc3aa07&v=v1) format('woff2');
 }
 
 @font-face {
     font-family: 'Noto Sans Tangsa';
-    font-style: bold;
-    font-weight: 700;
-    src: local('Noto Sans Tangsa'), local('Noto-Sans-Tangsa');
+    font-weight: 600;
+    font-display: swap;
+    src: local('Noto Sans Tangsa'), local('Noto-Sans-Tangsa'), url(https://fonts.gstatic.com/l/font?kit=z7NPdQPmcigbbZAIOl9igP26K470jo6T8_-TL9Dfdqim5zIoCpwujc2HCltwkDUhG7MhZgIrqVQkaWOBXrZqTRCR72gNb3kkw-gVoSo7EfkA-y2YLJQqYaJwtAd9BREKlmRX4mW8S7O8V7FMLabvylz1M9l084S-TTYHcqH_jTDRbyvTOElPovjTdGTWe3hd5S7dnLCUM-NyY7crqozvnSi_ZwYV2XhuBatSIL02kvEf9c5hVtJoGLdDTD6L-Ucef_vrYl6_rKEutrbDYjZcG1LLByqU--hLjgceWcYSZrshYqmIOFgpc24Kk2U7oDtb_ltcixnQNHwIGowloY571FRx-ZIXBeowYSNKSjXvrVkC0pYWK6MnfBMPDUK_HK0d18A8LjIv8Yv1iBEx7TE&skey=811194d00dc3aa07&v=v1) format('woff2');
 }
 
 * {
@@ -130,7 +130,7 @@ footer, .about, .home {
 
 .navbar .container > img {
     width: 90px;
-    height: 9   0px;
+    height: 90px;
     margin-left: calc(50% - 35px);
 }
 
