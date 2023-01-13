@@ -1,10 +1,37 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Noto+Sans+Tangsa:wght@400;600&display=swap');
 @import url(reset.css);
 
 :root {
     --raisin-black: #272624;
     --light-black: #323232;
     --crayola-gold: #E3BB8A;
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Merriweather');
+}
+
+@font-face {
+    font-family: 'Merriweather';
+    font-style: bold;
+    font-weight: 700;
+    src: local('Merriweather');
+}
+
+@font-face {
+    font-family: 'Noto Sans Tangsa';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Noto Sans Tangsa'), local('Noto-Sans-Tangsa');
+}
+
+@font-face {
+    font-family: 'Noto Sans Tangsa';
+    font-style: bold;
+    font-weight: 700;
+    src: local('Noto Sans Tangsa'), local('Noto-Sans-Tangsa');
 }
 
 * {
