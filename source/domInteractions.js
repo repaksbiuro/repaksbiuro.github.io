@@ -33,21 +33,25 @@ export const displayMenu = event => {
     bar3.style.bottom = '0';
     menu.style.top = '-220px';
   };
-
-  if (event.target.dataset.sectionName) {
-    document.getElementById(event.target.dataset.sectionName).scrollIntoView({'behavior': 'smooth', 'block': 'start'});
-  };
-
-  if (bar2.style.left === '100px') {
-    crossOut();
-    setTimeout(bar2.style.left = '0', 400);
+  
+  if (event.target.tagName !== 'BUTTON') {
+    if (event.target.dataset.sectionName) {
+      document.getElementById(event.target.dataset.sectionName).scrollIntoView({'behavior': 'smooth', 'block': 'start'});
+    };
+  
+    if (bar2.style.left === '100px') {
+      crossOut();
+      setTimeout(bar2.style.left = '0', 400);
+    } else {
+      bar2.style.left = '100px';
+      crossIn();
+    };
   } else {
-    bar2.style.left = '100px';
-    crossIn();
-  };
+    document.getElementById(event.target.dataset.sectionName).scrollIntoView({'behavior': 'smooth', 'block': 'start'});
+  }
 };
 
-export const displayScrollBtn = event => {
+export const displayScrollBtn = () => {
   const scrollBtn = document.getElementById('goTop');
   let top1 = document.documentElement.scrollTop;
   let top2 = document.scrollTop;
@@ -70,7 +74,7 @@ export const displayOfferDetails = event => {
     if (offerBoxInfo.style.height !== '340px') {
       offerBoxInfo.style.height = '340px';
     } else {
-      offerBoxInfo.style.height = '48px';
+      offerBoxInfo.style.height = '47px';
     };
     // For laptops with smaller screen than a desktop monitor.
   } else if (deviceWidth < 992) {
@@ -78,7 +82,7 @@ export const displayOfferDetails = event => {
       offerBoxInfo.style.height = '400px';
       offerBox.style.height = '510px';
     } else {
-      offerBoxInfo.style.height = '48px';
+      offerBoxInfo.style.height = '47px';
       offerBox.style.height = '235px';
     };
 

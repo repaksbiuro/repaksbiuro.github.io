@@ -131,7 +131,7 @@ footer, .about, .home {
 .navbar .container > img {
     width: 90px;
     height: 90px;
-    margin-left: calc(50% - 35px);
+    margin-left: calc(50% - 45px);
 }
 
 .navbar__button {
@@ -322,13 +322,13 @@ footer, .about, .home {
     color: var(--raisin-black);
 }
 
-.offer__list__item--gold .offer__info > h5 {
+.offer__list__item--gold .offer__info > h3 {
     color: var(--raisin-black);
 }
 
 .offer__info {
     width: 90%;
-    height: 43px;
+    height: 47px;
     overflow: hidden;
     transition: .5s all;
     display: flex;
@@ -336,7 +336,7 @@ footer, .about, .home {
     align-items: center;
 }
 
-.offer__info > h5 {
+.offer__info > h3 {
     font-size: 22px;
     color: white;
     text-align: center;
@@ -355,12 +355,12 @@ footer, .about, .home {
     margin: 10px 0;
 }
 
-.offer__info__list__item h5, .offer__info__list__item h6 {
+.offer__info__list__item h4, .offer__info__list__item h5 {
     font-size: 20px;
     line-height: 120%;
 }
 
-.offer__info__list__item h6 {
+.offer__info__list__item h5 {
     font-size: 18px;
     line-height: 160%;
 }
@@ -408,7 +408,7 @@ footer {
     border-radius: 5px;
 }
 
-.contact-form > h3 {
+.contact-form > h2 {
     font-size: 26px;
     margin: 10px auto 30px auto;
 }
@@ -541,7 +541,7 @@ footer {
         height: 48px;
     }
 
-    .offer__info__list__item h6 {
+    .offer__info__list__item h5 {
         font-size: 16px;
     }
 
@@ -664,15 +664,15 @@ footer {
         gap: 12px;
     }
 
-    .offer__info > h5 {
+    .offer__info > h3 {
         font-size: 24px;
     }
 
-    .offer__info__list__item h5 {
+    .offer__info__list__item h4 {
         font-size: 22px;
     }
 
-    .offer__info__list__item h6 {
+    .offer__info__list__item h5 {
         font-size: 20px;
     }
 }
