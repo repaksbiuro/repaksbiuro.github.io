@@ -1,4 +1,49 @@
-@import url(reset.css);
+/* RESET CSS */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100px;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* RESET CSS */
 
 :root {
     --raisin-black: #272624;
@@ -46,9 +91,6 @@ html {
 }
 
 section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     text-align: justify;
 }
 
@@ -56,26 +98,19 @@ h1 {
     font-size: 36px;
     color: var(--blood);
     margin: 60px auto;
-    text-align: center;
 }
 
 h2 {
     font-size: 28px;
-    font-family: 'Merriweather', serif;
-    text-align: center;
     color: var(--raisin-black);
 }
 
-b {
+b, .btn {
     font-weight: bold;
 }
 
 small {
     font-size: 14px;
-}
-
-footer, .about, .home {
-    font-family: 'Merriweather', serif;
 }
 
 .container {
@@ -84,11 +119,9 @@ footer, .about, .home {
 
 .btn {
     width: fit-content;
-    display: flex;
     padding: 12px 41px;
     font-size: 16px;
     font-family: 'Noto Sans Tangsa', sans-serif;
-    font-weight: bold;
     border: 1px solid var(--light-black);
     color: white;
     background-color: var(--light-black);
@@ -113,7 +146,32 @@ footer, .about, .home {
     border: 1px solid var(--crayola-gold);
     color: var(--crayola-gold);
 }
-  
+
+/* TYPICAL STYLES */
+h1, h2, footer, .navbar__menu, .offer .container > p, .offer__info > h3, .offer__info__list__item {
+    text-align: center;
+}
+
+section, footer, .btn, .navbar .container, .navbar__button, .navbar__menu, .navbar__links, .go-top, .offer__list__item, .offer__info, .offer__info__list__item, .offer__info__list__item > span, .offer__info__list p, .contact-form {
+    display: flex;
+}
+
+section, footer, .navbar .container, .navbar__links, .go-top, .offer__list__item, .offer__info, .offer__info__list__item, .offer__info__list__item > span {
+    align-items: center;
+}
+
+.navbar .container, .navbar__button, .navbar__links, .offer__list__item, .offer__info__list__item > span, .contact-form {
+    justify-content: space-between;
+}
+
+section, footer, .navbar__button, .navbar__links, .offer__list__item, .offer__info, .offer__info__list__item, .offer__info__list p, .contact-form {
+    flex-direction: column;
+}
+
+h2, footer, .about, .home, .navbar__links > span, .offer .container > p, .offer__list__item {
+    font-family: 'Merriweather', serif;
+}
+
 .navbar {
     width: 100%;
     height: 90px;
@@ -124,9 +182,6 @@ footer, .about, .home {
 .navbar .container {
     width: 100%;
     height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .navbar .container > img {
@@ -138,9 +193,6 @@ footer, .about, .home {
 .navbar__button {
     width: 23px;
     height: 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
     margin-right: 25px;
 }
 
@@ -170,29 +222,25 @@ footer, .about, .home {
 .navbar__menu {
     width: 100%;
     height: 200px;
-    display: flex;
-    justify-content: center;
     position: absolute;
     top: -220px;
     background-color: var(--raisin-black);
-    text-align: center;
     border-bottom: 1px solid var(--crayola-gold);
     filter: drop-shadow(5px 5px 15px black);
     transition: 0.5s all ease-in;
 }
 
+.navbar__menu, .go-top {
+    justify-content: center;
+}
+
 .navbar__links {
     width: 70%;
     padding: 40px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .navbar__links > span {
     font-size: 24px;
-    font-family: 'Merriweather', serif;
     text-decoration: none;
     color: white;
     cursor: pointer;
@@ -205,9 +253,6 @@ footer, .about, .home {
 .go-top {
     width: 55px;
     height: 55px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     position: fixed;
     bottom: 20px;
     right: 20px;
@@ -216,6 +261,7 @@ footer, .about, .home {
     background-color: var(--light-black);
     cursor: pointer;
     display: none;
+    z-index: 5;
 }
 
 .go-top img {
@@ -235,8 +281,11 @@ footer, .about, .home {
     width: 90%;
     margin: 0 auto;
     font-size: 20px;
-    line-height: 180%;
     color: var(--raisin-black);
+}
+
+.home .container > p, .about p, .copyright {
+    line-height: 180%;
 }
 
 .home .btn {
@@ -256,7 +305,6 @@ footer, .about, .home {
 
 .about p {
     font-size: 19px;
-    line-height: 180%;
     color: var(--raisin-black)
 }
 
@@ -283,10 +331,8 @@ footer, .about, .home {
 
 .offer .container > p {
     font-size: 20px;
-    font-family: 'Merriweather', serif;
     color: var(--light-black);
     letter-spacing: 2px;
-    text-align: center;
 }
 
 .offer__list {
@@ -309,12 +355,7 @@ footer, .about, .home {
     color: white;
     justify-self: center;
     transition: .5s all;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
     border-radius: 5px;
-    font-family: 'Merriweather', serif;
     box-shadow: 5px 5px 15px gray;
 }
 
@@ -332,15 +373,11 @@ footer, .about, .home {
     height: 47px;
     overflow: hidden;
     transition: .5s all;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
 }
 
 .offer__info > h3 {
     font-size: 22px;
     color: white;
-    text-align: center;
 }
 
 .offer__info__list {
@@ -349,45 +386,28 @@ footer, .about, .home {
 }
 
 .offer__info__list__item {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
     margin: 10px 0;
 }
 
-.offer__info__list__item h4, .offer__info__list__item h5 {
+.offer__info__list__item h4, .offer__info__list__item p {
     font-size: 20px;
     line-height: 120%;
 }
 
-.offer__info__list__item h5 {
+.offer__info__list__item p, .offer__info__list p {
     font-size: 18px;
     line-height: 160%;
 }
 
 .offer__info__list__item > span {
     width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
 }
 
 .offer__info__list p {
-    width: 25%;
-    font-size: 18px;
-    font-weight: bold;
     text-align: right;
-    display: flex;
-    flex-direction: column;
-    line-height: 120%;
 }
 
 footer {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     background-image: linear-gradient(to bottom,
     #ffffff,
     #c4c3c3,
@@ -401,10 +421,7 @@ footer {
     width: 100%;
     margin: 150px 0 40px 0;
     padding: 20px 10px;
-    display: flex;
-    flex-direction: column;
     align-items: flex-start;
-    justify-content: space-between;
     background-color: white;
     border-radius: 5px;
 }
@@ -423,26 +440,27 @@ footer {
     color: rgba(0, 0, 0, 0.6);
 }
 
+.contact-form > input, .contact-form textarea {
+    border: none;
+    outline: none;
+}
+
 .contact-form > input {
     width: 90%;
     height: 20px;
-    border: none;
     border-bottom: 1px solid var(--raisin-black);
     margin: 12px 0;
-    outline: none;
+}
+
+.contact-form textarea {
+    width: 90%;
+    height: 150px;
+    resize: none;
+    border-bottom: 1px solid var(--raisin-black);
 }
 
 .contact-form > input:focus, .contact-form textarea:focus {
     border-bottom: 2px solid var(--crayola-gold);
-}
-
-.contact-form textarea {
-    height: 150px;
-    width: 90%;
-    resize: none;
-    border: none;
-    outline: none;
-    border-bottom: 1px solid var(--raisin-black);
 }
 
 .contact-form .btn {
@@ -451,7 +469,6 @@ footer {
 
 .copyright {
     font-size: 18px;
-    line-height: 180%;
     margin: 30px 0;
     color: white;
 }
@@ -542,7 +559,7 @@ footer {
         height: 48px;
     }
 
-    .offer__info__list__item h5 {
+    .offer__info__list__item p {
         font-size: 16px;
     }
 
@@ -556,8 +573,8 @@ footer {
     h1 {
         width: 70%;
         word-spacing: 1px;
-        letter-spacing: 2px;
     }
+
     .container {
         width: 940px;
     }
@@ -607,11 +624,15 @@ footer {
     }
 
     .offer__info h4 {
-        font-size: 28px;
+        font-size: 22px;
     }
 
     .offer__info__list {
         margin-top: 20px;
+    }
+
+    .offer__info__list__item p {
+        font-size: 18px;
     }
 
     .copyright {
@@ -673,7 +694,7 @@ footer {
         font-size: 22px;
     }
 
-    .offer__info__list__item h5 {
+    .offer__info__list__item p {
         font-size: 20px;
     }
 }

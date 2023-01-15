@@ -11,6 +11,7 @@ export const mapListToDOMElements = (listOfValues, attribute) => {
 export const setFocusAndTitle = () => {
   let heading = document.querySelector('h1');
   heading.focus();
+  document.title = 'RePa K-s | Księgowość';
 };
 
 // EVENT FUNCTIONS
@@ -51,7 +52,7 @@ export const displayMenu = event => {
   }
 };
 
-export const displayScrollBtn = () => {
+export const displayScrollBtn = event => {
   const scrollBtn = document.getElementById('goTop');
   let top1 = document.documentElement.scrollTop;
   let top2 = document.scrollTop;
